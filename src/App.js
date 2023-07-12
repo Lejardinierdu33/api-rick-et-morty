@@ -57,7 +57,11 @@ const App = () => {
           <CharacterCard key={key} character={character} />
         ))}
       </section>
-      
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
     </div>
   );
 };
