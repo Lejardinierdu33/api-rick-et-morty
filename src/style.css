@@ -81,7 +81,7 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
-  cursor: url('./icons8-morty-30.png') 50 50, auto;
+  cursor: url('./icons8-morty-30.png') -50 -50, auto;
   text-align: center;
 }
 
