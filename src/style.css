@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+  opacity: 0.7;
+}
+
+.search-bar button {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  background-color: #333;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .character-grid {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.character-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.character-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.character-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.character-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.3s;
+  gap: 20px;
+}
+
+.character-card:hover .character-info {
+  opacity: 1;
+}
+
+.character-info h2 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.character-info p {
+  margin-bottom: 10px;
+}
+
+.character-info .status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.character-info .status-alive {
+  background-color: #2ecc71;
+}
+
+.character-info .status-dead {
+  background-color: #e74c3c;
+}
+
+.character-info .status-unknown {
+  background-color: #95a5a6;
+}
