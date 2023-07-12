@@ -47,16 +47,17 @@ const App = () => {
         <h1>Rick Et Morty</h1>
         <SearchBar onSearch={handleSearch} />
       </header>
-      <section className="character-grid">
-        {characters.map((character, key) => (
-          <CharacterCard key={key} character={character} />
-        ))}
-      </section>
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}
         onPageChange={handlePageChange}
       />
+      <section className="character-grid">
+        {characters.map((character, key) => (
+          <CharacterCard key={key} character={character} />
+        ))}
+      </section>
+      
     </div>
   );
 };

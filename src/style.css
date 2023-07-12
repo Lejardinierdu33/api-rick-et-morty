@@ -11,19 +11,22 @@ body {
 }
 
 .container {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
-.header {
+header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   margin-bottom: 20px;
+  font-size: 2rem;
+  width: 100%;
   flex-wrap: wrap;
   gap: 20px;
+  text-align: center;
 }
+
 
 .logo {
   width: 150px;
@@ -63,17 +66,12 @@ body {
 }
 
 .character-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-}
-
-@media screen and (max-width: 1200px) {
-  .character-grid {
-    display: block;
-    display: flex;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .character-card {
@@ -83,7 +81,8 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
+  cursor: url('./icons8-morty-30.png') 50 50, auto;
+  text-align: center;
 }
 
 .character-card:hover {
@@ -93,7 +92,7 @@ body {
 
 .character-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 10px;
 }
 
@@ -112,7 +111,7 @@ body {
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.7);
   transition: opacity 0.3s;
-  gap: 20px;
+  gap: 10px;
 }
 
 .character-card:hover .character-info {
@@ -120,7 +119,7 @@ body {
 }
 
 .character-info h2 {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   margin-bottom: 5px;
   text-align: center;
 }
@@ -147,4 +146,52 @@ body {
 
 .character-info .status-unknown {
   background-color: #95a5a6;
+}
+
+.character-info .species-label {
+  font-weight: bold;
+}
+
+.character-info .gender-label {
+  font-weight: bold;
+}
+
+.character-info .origin-label {
+  font-weight: bold;
+}
+
+.character-info .location-label {
+  font-weight: bold;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.pagination-btn {
+  padding: 8px 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 4px;
+}
+
+.pagination-btn:hover {
+  background-color: #555;
+}
+
+.pagination-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }

@@ -16,17 +16,17 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
         onClick={handlePreviousPage}
         disabled={currentPage === 1}
       >
-        Previous
+        Précédent
       </button>
       <p className="pagination-text">
-        Page {currentPage} of {totalPages}
+        Page {currentPage} sur {totalPages}
       </p>
       <button
         className="pagination-btn"
         onClick={handleNextPage}
         disabled={currentPage === totalPages}
       >
-        Next
+        Suivant
       </button>
     </div>
   );
